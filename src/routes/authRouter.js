@@ -1,6 +1,6 @@
 import { celebrate } from "celebrate";
 import { loginUserSchema, registerUserSchema } from "../validations/authValidation.js"; 
-import router from "./notesRouter.js";
+import router from "./notesRoutes.js";
 import { loginUser, registerUser, refreshUserSession, logoutUser } from "../controllers/authController.js";
 
 router.post('/auth/register', celebrate(registerUserSchema), registerUser);
