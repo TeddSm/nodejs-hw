@@ -7,7 +7,7 @@ import cookieParser from "cookie-parser";
 import { logger } from './middleware/logger.js';
 import { notFoundHandler } from './middleware/notFoundHandler.js';
 import { errorHandler } from './middleware/errorHandler.js';
-import authRouter from './routes/authRouter.js'
+import authRouter from './routes/authRoutes.js'
 import notesRouter  from './routes/notesRoutes.js'
 
 const app = express();
