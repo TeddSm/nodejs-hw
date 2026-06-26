@@ -14,15 +14,7 @@ router.post('/auth/register', celebrate(registerUserSchema), registerUser);
 router.post('/auth/login', celebrate(loginUserSchema), loginUser);
 router.post('/auth/refresh', refreshUserSession);
 router.post('/auth/logout', logoutUser);
-router.post(
-  '/auth/request-reset-email',
-  celebrate({ body: requestResetEmailSchema }),
-  requestResetEmail
-);
-router.post(
-  '/auth/reset-password',
-  celebrate({ body: resetPasswordSchema }),
-  resetPassword
-);
+router.post('/auth/request-reset-email', requestResetEmailSchema, requestResetEmail);
+router.post('/auth/reset-password', resetPasswordSchema, resetPassword);
 
 export default router;
